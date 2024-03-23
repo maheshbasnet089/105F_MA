@@ -12,6 +12,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull:false
       },
+      currentOrganizationNumber : {
+        type: DataTypes.INTEGER,
+        allowNull:true
+      },
 
     
 

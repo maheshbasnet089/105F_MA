@@ -4,8 +4,10 @@ const app = express()
 const authRoute = require("./routes/authRoute")
 const orgRoute = require("./routes/organizationRoute")
 
+const cookieParser = require("cookie-parser")
 require("./model/index")
 
+app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 

@@ -30,6 +30,7 @@ exports.loginUser = async(req,res)=>{
         
         if(isPasswordAlsoMatched){
             const token = jwt.sign({id:doesUserExistOfEmail[0].id},'thisissecret')
+            res.cookie('token',token)
             res.status(200).json({
                 message : "User logged in success",
                 token 
